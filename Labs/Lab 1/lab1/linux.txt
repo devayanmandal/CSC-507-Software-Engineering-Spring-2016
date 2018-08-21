@@ -1,0 +1,1 @@
+Linux mogul.strose.edu 2.6.18-406.el5 #1 SMP Tue Jun 2 17:25:57 EDT 2015 x86_64 x86_64 x86_64 GNU/Linux

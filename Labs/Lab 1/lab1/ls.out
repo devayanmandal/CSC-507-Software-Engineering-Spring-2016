@@ -1,0 +1,14 @@
+.:
+total 60
+drwxrwxr-x 2 mandald427 mandald427  4096 Jan 23 17:55 .
+drwxrwxr-x 3 mandald427 mandald427  4096 Jan 23 17:11 ..
+-rw-rw-r-- 1 mandald427 mandald427    23 Jan 21 00:22 fifthFile.txt
+-rw-rw-r-- 1 mandald427 mandald427    24 Jan 21 00:18 fourthFile.txt
+-rw-rw-r-- 1 mandald427 mandald427  4051 Jan 23 17:48 lab1unix.txt
+-rw-rw-r-- 1 mandald427 mandald427  3903 Jan 23 17:46 lab1unix.txt~
+-rw-rw-r-- 1 mandald427 mandald427   104 Jan 23 17:39 linux.txt
+-rw-rw-r-- 1 mandald427 mandald427     0 Jan 23 17:55 ls.out
+-rw-rw-r-- 1 mandald427 mandald427 12041 Jan 21 00:58 secondFile.txt
+-rw-rw-r-- 1 mandald427 mandald427 12041 Jan 20 23:36 secondFile.txt~
+-rw-rw-r-- 1 mandald427 mandald427    23 Jan 23 17:28 sixthFile.txt
+-rw-rw-r-- 1 mandald427 mandald427    18 Jan 21 00:16 thirdFile.txt

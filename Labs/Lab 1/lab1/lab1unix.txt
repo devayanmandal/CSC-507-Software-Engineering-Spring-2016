@@ -1,0 +1,169 @@
+Dev Ikhlas "Lab 1 Questions"
+
+Question 1: Describe the commands
+
+C-x C-s: Writes and saves the file (secondFile.txt) in the assigned directory (main directory for our example)
+
+C-x C-c: Saves the file and exits
+
+C-x C-f: Finds and displays an already created file. If the file name does not exist, the Linux 5 server creates a new file
+
+C-x C-w: Saves and changes the name of the file to what the user desires
+
+C-g    : Quits the current command
+
+C-a    : This commands maintains the cursor at the begining of the line
+
+C-e    : This commands maintains the cursor at the end of the line
+
+C-d    : This command deletes the selected letter
+
+C-_    : This command undoes the previous task
+
+C-v    : This command takes the cursor forward to the next page
+
+M-v    : This comming takes the cursor backward one page
+
+C-s    : This command will allow to search in the forward direction
+  
+C-r    : This command will allow to search in the reverse direction
+
+M-%    : This command will allow to replace the query with different query
+
+C-k    : This command deletes the entire line right of the cursor
+
+C-y    : This command reverses the C-k command
+
+C-x u  : This command will undo the previous action which is taken by user
+
+
+Question 2: What is your home directory on mogul.strose.edu? (hint: use pwd)
+Ans: /home/mandald427 (Dev), /home/ahmedi895 (Ikhlas)
+
+
+Question 3: What output do you see when you issue the ls command on mogul.strose.edu?
+Ans: lab1unix.txt   secondFile.txt lab1unix.txt~  secondFile.txt~
+
+
+Question 4: Change your working directory to the one you just created and issue the pwd command. What does this show as your working directory?
+Ans: /home/mandald427/cs507/lab1
+
+
+Question 5: What do you think the information in linux.txt means?
+
+Ans:
+Linux mogul.strose.edu 2.6.18-406.el5 #1 SMP Tue Jun 2 17:25:57 EDT 2015 x86_64 x86_64 x86_64 GNU/Linux
+
+Linux mogul.strose.edu 2.6.18-406.el5 #1 SMP
+Virtual Red Hat Enterprise Linux 5 server used for computer science courses offered at the College of Saint Rose
+
+Tue Jun 2 17:25:57 EDT 2015: Time of last update
+
+x86_64 x86_64 x86_64 GNU/Linux: This GNU/Linux OS supports the 64-bit version of the x86 architecture
+
+
+Question 6: One sentence description of each command
+1. ls: lists the directories/files in the directory
+
+2. cd: changes to the desired directory. cd alone leads to the home directory
+
+3. cp: copies file(s) int the the desired file(s)
+
+4. mv: moves the file into the desired directory or changes it to a new filename
+
+5. rm: deletes the desired file
+
+6. mkdir: makes a new directory
+
+7. pwd: provides the full filepath
+
+8. man: provides the manual. Asks the user for the manual page they're looking for
+
+9. chmod: helps to modify the permission of the file i.e. who can read, write and/or execute the file
+
+10. cat: helps to read the desired file
+
+11. more: allows to view the file one screen at a time. Provides a viewing percent at the bottom for file size tracking
+
+12. grep: allows the user to search for a desired String
+
+13. head: provides a compact view of the file to the user i.e. The first 10 lines
+
+14. tail: provides a compact view of the file to the user i.e. The last 10 lines
+
+15. ln: creates a soft/hard link or shortcut for a file into a given file or directory
+
+16. find: Command: find -name "filename.txt"
+          Finds and displays the path of the desired file
+
+17. rmdir: removes the desired directory
+
+18. wc: provides the number of lines, words and characters present in the desired        file. For example, fifthFile.txt has 0 words, 4 lines and 23 characters
+
+19. diff: Command: diff filename1.txt filename2.txt
+          Compares the lines of one file to another and outputs the unique lines           only. If both files have no difference in lines, no output is provided
+
+20. scp: copies the desired file(s) to the local host. Username, password autheni         tication maybe required
+
+21. touch: Commands: touch fileName.txt
+           Changes the time and date of last file modification to the present sys           tem's time and date stamp
+
+Output Capture:
+total 60
+drwxrwxr-x 2 mandald427 mandald427  4096 Jan 23 17:55 .
+drwxrwxr-x 3 mandald427 mandald427  4096 Jan 23 17:11 ..
+-rw-rw-r-- 1 mandald427 mandald427    23 Jan 21 00:22 fifthFile.txt
+-rw-rw-r-- 1 mandald427 mandald427    24 Jan 21 00:18 fourthFile.txt
+-rw-rw-r-- 1 mandald427 mandald427  4051 Jan 23 17:48 lab1unix.txt
+-rw-rw-r-- 1 mandald427 mandald427  3903 Jan 23 17:46 lab1unix.txt~
+-rw-rw-r-- 1 mandald427 mandald427   104 Jan 23 17:39 linux.txt
+-rw-rw-r-- 1 mandald427 mandald427     0 Jan 23 17:55 ls.out
+-rw-rw-r-- 1 mandald427 mandald427 12041 Jan 21 00:58 secondFile.txt
+-rw-rw-r-- 1 mandald427 mandald427 12041 Jan 20 23:36 secondFile.txt~
+-rw-rw-r-- 1 mandald427 mandald427    23 Jan 23 17:28 sixthFile.txt
+-rw-rw-r-- 1 mandald427 mandald427    18 Jan 21 00:16 thirdFile.txt
+
+
+Question 7:
+How do you change your working directory to be \one level up" from the
+current working directory? (Give the command.)
+Ans: cd ..
+     [mandald427@mogul lab1]$ cd ..
+     [mandald427@mogul cs507]$ 
+
+
+Question 8: Give two or three different ways to change your working directory to be your home directory. All likely involve the cd command, but will take different parameters.
+Ans:
+1. cd
+   [mandald427@mogul cs507]$ cd
+   [mandald427@mogul ~]$
+
+2. cd ~
+   [mandald427@mogul cs507]$ cd ~
+   [mandald427@mogul ~]$
+
+3. cd /home/mandald427 (path to the home directory)
+
+Output capture: java.out
+[mandald427@mogul hello]$ ls
+hello.c  Hello.class  Hello.java  Hello.java~  java.out
+[mandald427@mogul hello]$ javac Hello.java
+[mandald427@mogul hello]$ cat java.out
+Hello, Java application world!
+Hello from Ikhlas & Dev!
+
+Output capture: java2.out
+[mandald427@mogul hello]$ javac Hello.java
+[mandald427@mogul hello]$ java Hello Ikhlas > java2.out
+[mandald427@mogul hello]$ cat java2.out
+Hello, Java application world!
+Hello from Ikhlas & Dev!
+Thanks for running, Ikhlas!
+
+Ques 9: Output capture: c.out
+[mandald427@mogul hello]$ gcc hello.c
+[mandald427@mogul hello]$ ./a.out > ./c.out
+[mandald427@mogul hello]$ ls
+a.out  c.out  hello.c  Hello.class  Hello.java  Hello.java~  java2.out  java.out
+[mandald427@mogul hello]$ cat c.out
+Hello, C World!

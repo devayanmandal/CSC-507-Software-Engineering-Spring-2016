@@ -1,0 +1,100 @@
+Needs:
+
+Available rooms
+Room number (201, 202, ..... ,210, 301, 302, .... ,310)
+Room location (Building 1, Building 2, Building 3)
+
+*
+professors
+students
+staff
+guests
+
+no of rooms available: ask registrar
+
+
+*
+
+UI:
+ College colors
+ text based documentation
+ logo (registrar involvement)
+ Guest: should have same UI, prices list:
+
+
+room allocation hierarchy:
+ professor higher priority
+ registar: client
+
+User profiles:
+ Login: using saint rose accounts
+ Guest: non-academic account
+
+Pricing:
+payment: Paypal, any major credit card
+ Web app: provides confirmation
+ Room Cancellation policy: freeing up the room
+ Recurring classroom booking requirements: meetings, classrooms
+ Pricing thru out the year: varies registrar
+ Discount: guest - 10% off for recurring subscription
+
+website:
+Types of classroom:
+ Smart lab
+ computer lab, smart board, projector (types of technology)
+
+ Guests:
+  Entered in thru staff: staff's responsibility
+
+Log: 
+ Waiting room: public lounge available: not accounted for
+ Resevation limitation:
+  Student: special permission, faculty: resevations
+  Faculty, staff: no reservations
+
+How fast & reliable should this application be:
+ small wait time
+
+Disabilities: 
+ vision impairments:
+ hearing impairments:
+
+Case-diagram:
+ No diagrams
+
+Maintainence:
+ Should be on-going
+ 
+FAQ
+ standard questions
+  Format: standard
+
+Assumptions
+ Registrar can change
+  Fix conflicts
+   Loud party/test next door: 
+   Payment already made: rooms cannot be changed
+   User conflicts: 2 professors fighting over a room
+   Preferences: 1st come 1st serve
+
+Hosting: by the college
+
+Database:
+ Registrar provides info, developers make
+
+Time - limit: before May
+ Time - line: list of rooms with given technology
+
+Waiting room:
+ Mobile app: what kind of technologies for future use
+
+T&C
+ Policy: theft, arsony, they're liable
+ Security: reporting
+
+In April: 1st viewing
+
+Choose technology which we choose:
+ Database, Windows
+
+Budget: set by registrar

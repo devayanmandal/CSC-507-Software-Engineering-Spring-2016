@@ -1,0 +1,217 @@
+
+CSC507 Lab 1
+Computer Science
+Software Engineering
+The College of Saint Rose
+Spring 2016
+January 19, 2016
+1 Lecture 1: Introduction and Overview
+Lab 1: Unix Introduction/Refresher and Other Setup Due: 11:59PM Monday,
+January 25, 2016
+In this rst lab, we will set up some accounts and get you used to using
+them. This includes a chance to learn or refresh your knowledge of some basic
+Unix commands, and to write and run some simple C and Java programs in a
+Unix environment. You may work alone or in groups of size 2 or 3 on this lab.
+Only one submission per group is needed.
+You may ask your instructor and classmates for help as you complete this lab,
+but the work you submit must ultimately be your own (or that of your group).
+If you are completely unfamiliar with Unix, don't hesitate to ask questions! On
+the other hand, if you have some experience, don't hesitate to help a classmate!
+None of these tasks is intended to be hard, but if you don't have much Unix
+experience (and it is reasonable if you don't), they could be.
+2 Getting Set Up
+Create a document where you will record your answers to the lab questions. If
+you use plain text, call it \lab1.txt". If it's a Word document, you can call it
+whatever you'd like, but when you submit, be sure you convert it to a PDF
+document \lab1.pdf" before you submit it. Also, read over the description of
+the types of items you will encounter in our labs on the course home page.
+1
+3 Unix Account
+We will be using a virtual Linux server called mogul.strose.edu at times during
+the semester. If you already have an account on mogul, please make sure you
+can still log in. If you do not, please let me know.
+Log into mogul.strose.edu. From PuTTY or similar Windows secure shell
+clients, just ll in the information on the connection dialog using mogul.strose.edu
+for the host name and your username for the username.
+If using ssh from a Terminal window on the Mac, and your username on
+mogul.strose.edu is jcool, you would issue the command
+ssh mogul.strose.edu -l jcool
+at the terminal prompt. Log in with your mogul.strose.edu password. You
+should be presented with a prompt that looks something like:
+jcool@mogul
+and mogul is now ready to accept your commands. More on those below.
+4 Unix Practice
+GUIs are nice, but they can be slow to navigate and too restrictive for some
+purposes. You can often work much more eciently by working in a Unix
+environment and interacting with the system by typing commands at the Unix
+shell, or command line. When you log in, you will be presented with a prompt.
+This is your direct interface to issue commands to the operating system. When
+you type a command here, the shell will execute the command on your behalf,
+print out any results, then reissue the prompt. Of course, the command line is
+useless if you don't know what commands it understands. You will learn about
+several important commands in this lab, but we will only scratch the surface.
+One of the most important is man { the Unix manual. Every Unix command
+has a manual page, including man. To see the manual page about man, type
+the command: man man You will be presented with a manual entry about the
+Unix manual, one page at a time. You can advance to the next page by pressing
+the space bar, and can quit out of man to return to your command prompt by
+typing 'q'.
+5 The Emacs Editor
+Emacs (emacs from the Unix command line) is a powerful text editor, which
+is very good for programming in a language like C and for general plain-text
+editing. You will need to become familiar with it. To try it out, you will use
+it to create your lab1unix.txt le that will contain your answers to this week's
+lab questions. For now, you are to create this le in your home directory on
+2
+mogul. You already should have one session connected to mogul from above.
+Now open a second PuTTY or Terminal window and log into mogul.strose.edu
+on that one as well. In one of the windows, launch emacs on the le lab1unix.txt.
+emacs lab1unix.txt
+Emacs should start up, and present you with a text-based menu across the
+top (which we will purposely ignore), a large area where you can edit the le,
+and two lines of status information across the bottom.
+Type your name(s) and \Lab 1 Questions" in the Emacs window that is
+editing the le lab1-unix.txt.
+In the other window, launch another emacs session where you can type
+some text and then identify the function of and experiment with the Emacs
+commands below. Note that C- before a key means hold down Ctrl and hit that
+key. M- indicates the \Meta" key, which on most systems is Esc. To issue a
+Meta command, hit the Esc key, release it, then hit the key(s) for the command
+you wish to issue. Use the keystrokes rather than the menus. It will save you
+time in the long run! Note: for some of these commands, a very small bumands from the above list, move the linux.txt le you created in your home
+directory into the directory you created on mogul for your work for this as-
+signment. Show that this has worked by issuing the following command from
+inside of your course directory (but not inside the directory for this assignment):
+ls -laR > ls.out
+Then move the le ls.out into the directory for this assignment.
+Output Capture:
+ls.out
+Using the Unix manual, your favorite search engine, or in discussion with
+your classmates, determine the answers to these questions:
+Question 7:
+How do you change your working directory to be \one level up" from the
+current working directory? (Give the command.)
+Question 8:
+Give two or three diUnix command line.
+See Example: /home/cs507/examples/hello
+For you to run this, you will want to copy the example to your own directory.
+Create a directory called hello under your directory for this lab and copy the C
+and Java les from the example into that directory. Change to that directory
+and compile and run it:
+javac Hello.java
+java Hello
+Now, edit the Java program so it prints out a second message, recompile and
+re-run, but this time redirecting your output to a le java.out.
+Output Capture:
+java.out
+When we run a Java program from the Unix command line, any additional
+parameters we place after the program name when we launch the program are
+delivered to the program in the args array that is passed to the main method.
+Finally, modify the Java program so it prints out a third message which assumes
+the rst parameter passed is the name of the person running the program. So
+running
+java Hello Joe
+would output an additional line:
+Thanks for running, Joe!
+Redirect the output of this new program to java2.out when you put your
+own name in as the rst command-line parameter.
+Output Capture:
+java2.out
+9 Compiling and Running a C Program in Unix
+C is a widely-used, general purpose language, well-suited to low-level systems
+programming scientic computation. We will not study it in detail in this
+course, but it is worth a bit of our time to see how to develop, compile, and run
+6
+a simple C program in a Unix environment. We will initially study it assuming
+you have Java experience, focusing on the features that make C signicantly
+disimple C program (hello.c) in a Unix environment. As part of the previous task,
+you copied a C program called hello.c into a directory in your account. Change
+to that directory and compile and run it:
+gcc hello.c
+./a.out
+Things to note from this simple example:
+ We run a program named gcc, which is a free C compiler.
+ gcc, in its simplest form, can be used to compile a C program in a single
+le:
+gcc hello.c
+In this case, we're asking gcc to compile a C program found in the le hello.c.
+Since we didn't specify what to call the executable program produced, gcc pro-
+duces a le a.out. The name is a.out for historical reasons. When we want to
+run a program located in our current directory in a Unix shell, we type its name.
+For example, when we wanted to run gcc, we typed its name, and the Unix shell
+found a program on the system in a le named gcc. How does it know where to
+nd it? The shell searches for programs in a sequence of directories known as
+the search path.
+Try: env.
+So if we want to run a.out, we should be able to type its name. But our
+current directory, always referred to in a Unix shell by \.", is not in the search
+path. We need to specify the \." as part of the command to run:
+./a.out
+Of course, we probably don't want to compile up a bunch of programs all
+named a.out, so we usually ask gcc to put its output in a le named as one of
+the parameters to gcc:
+gcc -o hello hello.c Here, the executable le produced is called hello. And in
+the program itself, let's make sure we understand everything:
+7
+ At the top of the le, we have a big comment describing what the program
+does, who wrote it, and when. Your programs should have something
+similar in each C le.
+ We are going to use a C library function called printf to print a message to
+the screen. Before we can use this function, we need to tell the C compiler
+about it. For C library functions, the needed information is provided in
+header les, which usually end in .h. In this case, we need to include
+stdio.h. Why? See man 3 printf.
+ A C program starts its execution by calling the function main. Any
+command-line parameters are provided to main through the rst two argu-
+ments to main, traditionally declared as argc, the number of command-line
+parameters (including the name of the program itself), and argv, an ar-
+ray of pointers to character strings, each of which represents one of the
+command-line parameters. In this case, we don't use them, but there they
+are.
+ Our call to printf results in the string passed as a parameter to be printed
+to the screen. The nn results in a new line.
+ Our main function returns an int value. A value of 0 returned from main
+generally indicates a successful execution, while a non-zero return indicates
+an error condition. So we return a 0.
+Notes for Java programmers: Good news: much of the syntax of Java
+was borrowed from C, so a lot of things will look familiar. There are no classes
+and methods, just functions, which can be called at any time. Any information
+a function needs to do its job must be provided by its parameters or exist in
+global variables { variable declared outside of every function and which are ac-
+cessible from all functions. Now, edit the C program so it prints out a second
+message, recompile and re-run, but this time redirecting your output to a le
+c.out.
+Output Capture:
+c.out
+10 Practice Programs
+Write your own Java and C programs named Seq.java and seq.c that clone some
+of the functionality of the Unix seq command. See the man page for seq(1) for
+details, but the program should take 1, 2, or 3 numeric parameters. To simplify,
+you may ignore all other command line options, and that all given parameters
+are valid integers. Note that the command-line parameters in each case will
+come to you as strings, and will need to be converted to integers before they
+can be used. In each language there are multiple mechanisms that will allow
+8
+you to do the conversion. One possibility in Java is to use the Integer.parseInt
+method, and in C to use the strtol function from the C standard library. If
+your programs are presented with invalid command line parameters (e.g., there
+aren't the right number of parameters, the parameters cannot be converted
+to integers, or they otherwise make no sense), your program should print an
+appropriate error message and exit. Make sure your programs compile and run
+on mogul using gcc for the C program, and javac for Java.
+11 Submitting
+Before the due date submit your lab for grading. Package up all required les
+into an appropriate archive format (.tar.gz, .zip, and .7z are acceptable) and
+upload it to blackboard.
+Note that you will need to transfer the les you created on mogul.strose.edu
+to the computer from which you will be making your submission, so they can
+be included in your archive. Windows users might want to consider \WinSCP"
+or \FileZilla", Mac users can use the builtin scp command at the Terminal, or
+use \FileZilla". There are many other options in both cases.
+9
+
+
+
+
+
+
